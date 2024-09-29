@@ -1,0 +1,177 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "err_autocutter" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please remove jammed paper and close roll paper cover.\nRemove any jammed paper or foreign substances in the printer, and then turn the printer off and turn the printer on again.\n"
+          }
+        }
+      }
+    },
+    "err_battery" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Battery of printer is hot.\n"
+          }
+        }
+      }
+    },
+    "err_battery_real_end" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please connect AC adapter or change the battery.\nBattery of printer is almost empty.\n"
+          }
+        }
+      }
+    },
+    "err_cover_open" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please close roll paper cover.\n"
+          }
+        }
+      }
+    },
+    "err_head" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Print head of printer is hot.\n"
+          }
+        }
+      }
+    },
+    "err_motor" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motor Driver IC of printer is hot.\n"
+          }
+        }
+      }
+    },
+    "err_need_recover" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Then, If the printer doesn\\'t recover from error, please cycle the power switch.\n"
+          }
+        }
+      }
+    },
+    "err_no_response" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please check the connection of the printer and the mobile terminal.\nConnection get lost.\n"
+          }
+        }
+      }
+    },
+    "err_offline" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Printer is offline.\n"
+          }
+        }
+      }
+    },
+    "err_overheat" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please wait until error LED of the printer turns off.\n"
+          }
+        }
+      }
+    },
+    "err_paper_feed" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please release a paper feed switch.\n"
+          }
+        }
+      }
+    },
+    "err_receipt_end" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please check roll paper.\n"
+          }
+        }
+      }
+    },
+    "err_unrecover" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please cycle the power switch of the printer.\nIf same errors occurred even power cycled, the printer may out of order.\n"
+          }
+        }
+      }
+    },
+    "err_voltage" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please check the voltage status.\n"
+          }
+        }
+      }
+    },
+    "err_wait_removal" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please remove paper.\n"
+          }
+        }
+      }
+    },
+    "err_wrong_paper" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please set correct roll paper.\n"
+          }
+        }
+      }
+    },
+    "methoderr_errcode" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Error Code\n"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
