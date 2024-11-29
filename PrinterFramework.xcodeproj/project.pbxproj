@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BC4F5C92CF9CBD30087EDBC /* PrinterJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC4F5C82CF9CBD30087EDBC /* PrinterJob.swift */; };
+		3BC4F5D02CF9CCB50087EDBC /* libeposeasyselect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC4F5CE2CF9CCB50087EDBC /* libeposeasyselect.xcframework */; };
+		3BC4F5D22CF9CCB50087EDBC /* libepos2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC4F5CF2CF9CCB50087EDBC /* libepos2.xcframework */; };
 		EE42A8F22BAAB79000F2DAA3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE42A8F12BAAB79000F2DAA3 /* String+Extensions.swift */; };
 		EE6C411F2BA988070065746A /* ePOS2.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6C411E2BA988070065746A /* ePOS2.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE6C41212BA988190065746A /* Header.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6C41202BA988190065746A /* Header.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE7379162BA96DBC0090ADA0 /* PrinterFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = EE7379152BA96DBC0090ADA0 /* PrinterFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE73791D2BA96E030090ADA0 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73791C2BA96E030090ADA0 /* Printer.swift */; };
 		EE7379202BA96E2B0090ADA0 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = EE73791F2BA96E2B0090ADA0 /* Localizable.xcstrings */; };
-		EE7379242BA96E7A0090ADA0 /* libepos2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7379222BA96E7A0090ADA0 /* libepos2.xcframework */; };
 		EE73792C2BA96F940090ADA0 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EE73792B2BA96F940090ADA0 /* libxml2.2.tbd */; };
 		EE73792E2BA96FAF0090ADA0 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE73792D2BA96FAF0090ADA0 /* CoreBluetooth.framework */; };
 		EE7379302BA96FB80090ADA0 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE73792F2BA96FB80090ADA0 /* ExternalAccessory.framework */; };
@@ -26,7 +28,6 @@
 		EEAE40892C081A54005A0391 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEAE40882C081A54005A0391 /* Preview Assets.xcassets */; };
 		EEAE408F2C081AC6005A0391 /* PrinterFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7379122BA96DBC0090ADA0 /* PrinterFramework.framework */; };
 		EEAE40902C081AC6005A0391 /* PrinterFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE7379122BA96DBC0090ADA0 /* PrinterFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EED2E0352BC3F95D00605EA5 /* libeposeasyselect.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE7379232BA96E7A0090ADA0 /* libeposeasyselect.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3BC4F5C82CF9CBD30087EDBC /* PrinterJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterJob.swift; sourceTree = "<group>"; };
+		3BC4F5CE2CF9CCB50087EDBC /* libeposeasyselect.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libeposeasyselect.xcframework; sourceTree = "<group>"; };
+		3BC4F5CF2CF9CCB50087EDBC /* libepos2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libepos2.xcframework; sourceTree = "<group>"; };
 		EE42A8F12BAAB79000F2DAA3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		EE6C411E2BA988070065746A /* ePOS2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ePOS2.h; sourceTree = "<group>"; };
 		EE6C41202BA988190065746A /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
@@ -75,8 +79,6 @@
 		EE7379152BA96DBC0090ADA0 /* PrinterFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterFramework.h; sourceTree = "<group>"; };
 		EE73791C2BA96E030090ADA0 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		EE73791F2BA96E2B0090ADA0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		EE7379222BA96E7A0090ADA0 /* libepos2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libepos2.xcframework; path = ../../ePOS_SDK_iOS_v2.27.0a/libepos2.xcframework; sourceTree = "<group>"; };
-		EE7379232BA96E7A0090ADA0 /* libeposeasyselect.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = libeposeasyselect.xcframework; path = ../../ePOS_SDK_iOS_v2.27.0a/libeposeasyselect.xcframework; sourceTree = "<group>"; };
 		EE73792B2BA96F940090ADA0 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/lib/libxml2.2.tbd; sourceTree = DEVELOPER_DIR; };
 		EE73792D2BA96FAF0090ADA0 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		EE73792F2BA96FB80090ADA0 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/System/Library/Frameworks/ExternalAccessory.framework; sourceTree = DEVELOPER_DIR; };
@@ -96,11 +98,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BC4F5D02CF9CCB50087EDBC /* libeposeasyselect.xcframework in Frameworks */,
 				EE7379302BA96FB80090ADA0 /* ExternalAccessory.framework in Frameworks */,
 				EE73792E2BA96FAF0090ADA0 /* CoreBluetooth.framework in Frameworks */,
+				3BC4F5D22CF9CCB50087EDBC /* libepos2.xcframework in Frameworks */,
 				EE73792C2BA96F940090ADA0 /* libxml2.2.tbd in Frameworks */,
-				EE7379242BA96E7A0090ADA0 /* libepos2.xcframework in Frameworks */,
-				EED2E0352BC3F95D00605EA5 /* libeposeasyselect.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +156,7 @@
 				EE6C41202BA988190065746A /* Header.h */,
 				EE73791C2BA96E030090ADA0 /* Printer.swift */,
 				EE42A8F12BAAB79000F2DAA3 /* String+Extensions.swift */,
+				3BC4F5C82CF9CBD30087EDBC /* PrinterJob.swift */,
 				EE8D4A252BA9D486001C5BA0 /* PrinterDiscovery.swift */,
 			);
 			path = PrinterFramework;
@@ -170,11 +173,11 @@
 		EE7379212BA96E7A0090ADA0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BC4F5CF2CF9CCB50087EDBC /* libepos2.xcframework */,
+				3BC4F5CE2CF9CCB50087EDBC /* libeposeasyselect.xcframework */,
 				EE73792F2BA96FB80090ADA0 /* ExternalAccessory.framework */,
 				EE73792D2BA96FAF0090ADA0 /* CoreBluetooth.framework */,
 				EE73792B2BA96F940090ADA0 /* libxml2.2.tbd */,
-				EE7379222BA96E7A0090ADA0 /* libepos2.xcframework */,
-				EE7379232BA96E7A0090ADA0 /* libeposeasyselect.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			files = (
 				EE73791D2BA96E030090ADA0 /* Printer.swift in Sources */,
 				EE42A8F22BAAB79000F2DAA3 /* String+Extensions.swift in Sources */,
+				3BC4F5C92CF9CBD30087EDBC /* PrinterJob.swift in Sources */,
 				EE8D4A262BA9D486001C5BA0 /* PrinterDiscovery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
