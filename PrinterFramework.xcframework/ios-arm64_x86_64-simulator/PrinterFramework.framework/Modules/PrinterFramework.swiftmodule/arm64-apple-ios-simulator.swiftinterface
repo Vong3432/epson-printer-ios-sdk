@@ -1,0 +1,85 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name PrinterFramework
+import CoreBluetooth
+import Foundation
+@_exported import PrinterFramework
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum PrinterError : Foundation.LocalizedError {
+  case runTimeError(Swift.String)
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public protocol PrinterEventDelegate : AnyObject {
+  func onError(message: Swift.String)
+  func onSuccessPrinted()
+}
+@objc final public class Printer : ObjectiveC.NSObject {
+  public enum TextFont {
+    case A, B, C, D, E
+    public var rawValue: Swift.Int32 {
+      get
+    }
+    public static func == (a: PrinterFramework.Printer.TextFont, b: PrinterFramework.Printer.TextFont) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum TextStyle {
+    case header, large, medium, normal
+    public var size: Swift.Int {
+      get
+    }
+    public static func == (a: PrinterFramework.Printer.TextStyle, b: PrinterFramework.Printer.TextStyle) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct Configuration {
+    public let printerSeries: PrinterFramework.Epos2PrinterSeries
+    public let printerModelLang: PrinterFramework.Epos2ModelLang
+    public init(printerSeries: PrinterFramework.Epos2PrinterSeries, printerModelLang: PrinterFramework.Epos2ModelLang)
+    public static var m30II: PrinterFramework.Printer.Configuration {
+      get
+    }
+  }
+  public struct Template {
+    public enum Kind {
+      case text(Swift.String)
+      case textWith(left: Swift.String? = nil, right: Swift.String? = nil, columnWidth: Swift.Int, tabIndent: Swift.Int?)
+      case line(columnWidth: Swift.Int)
+    }
+    public let kind: PrinterFramework.Printer.Template.Kind
+    public let textStyle: PrinterFramework.Printer.TextStyle
+    public let textFont: PrinterFramework.Printer.TextFont
+    public let lineBreakAfter: Swift.Bool
+    public init(kind: PrinterFramework.Printer.Template.Kind, textStyle: PrinterFramework.Printer.TextStyle, textFont: PrinterFramework.Printer.TextFont, lineBreakAfter: Swift.Bool)
+  }
+  weak final public var printerEventDelegate: (any PrinterFramework.PrinterEventDelegate)?
+  public init(configuration: PrinterFramework.Printer.Configuration = .m30II)
+  final public func setTemplate(id: Swift.String, templates: [PrinterFramework.Printer.Template]) throws
+  final public func print()
+  @objc deinit
+}
+extension PrinterFramework.Printer : PrinterFramework.Epos2DiscoveryDelegate {
+  @objc final public func onDiscovery(_ deviceInfo: PrinterFramework.Epos2DeviceInfo!)
+}
+extension PrinterFramework.Printer : CoreBluetooth.CBCentralManagerDelegate {
+  @objc final public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+}
+extension PrinterFramework.Printer : PrinterFramework.Epos2PtrStatusChangeDelegate {
+  @objc final public func onPtrStatusChange(_ printerObj: PrinterFramework.Epos2Printer!, eventType: Swift.Int32)
+}
+extension PrinterFramework.Printer : PrinterFramework.Epos2PtrReceiveDelegate {
+  @objc final public func onPtrReceive(_ printerObj: PrinterFramework.Epos2Printer!, code: Swift.Int32, status: PrinterFramework.Epos2PrinterStatusInfo!, printJobId: Swift.String!)
+}
+extension PrinterFramework.Printer.TextFont : Swift.Equatable {}
+extension PrinterFramework.Printer.TextFont : Swift.Hashable {}
+extension PrinterFramework.Printer.TextStyle : Swift.Equatable {}
+extension PrinterFramework.Printer.TextStyle : Swift.Hashable {}

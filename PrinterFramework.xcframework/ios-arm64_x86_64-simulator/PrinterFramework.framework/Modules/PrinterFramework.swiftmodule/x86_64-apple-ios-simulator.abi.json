@@ -1,0 +1,2077 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "CoreBluetooth",
+        "printedName": "CoreBluetooth",
+        "declKind": "Import",
+        "moduleName": "PrinterFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PrinterFramework"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrinterError",
+        "printedName": "PrinterError",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "runTimeError",
+            "printedName": "runTimeError",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(PrinterFramework.PrinterError.Type) -> (Swift.String) -> PrinterFramework.PrinterError",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> PrinterFramework.PrinterError",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrinterError",
+                        "printedName": "PrinterFramework.PrinterError",
+                        "usr": "s:16PrinterFramework0A5ErrorO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "PrinterFramework.PrinterError.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrinterError",
+                        "printedName": "PrinterFramework.PrinterError",
+                        "usr": "s:16PrinterFramework0A5ErrorO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:16PrinterFramework0A5ErrorO07runTimeC0yACSScACmF",
+            "mangledName": "$s16PrinterFramework0A5ErrorO07runTimeC0yACSScACmF",
+            "moduleName": "PrinterFramework"
+          },
+          {
+            "kind": "Var",
+            "name": "errorDescription",
+            "printedName": "errorDescription",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PrinterFramework0A5ErrorO16errorDescriptionSSSgvp",
+            "mangledName": "$s16PrinterFramework0A5ErrorO16errorDescriptionSSSgvp",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PrinterFramework0A5ErrorO16errorDescriptionSSSgvg",
+                "mangledName": "$s16PrinterFramework0A5ErrorO16errorDescriptionSSSgvg",
+                "moduleName": "PrinterFramework",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:16PrinterFramework0A5ErrorO",
+        "mangledName": "$s16PrinterFramework0A5ErrorO",
+        "moduleName": "PrinterFramework",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "LocalizedError",
+            "printedName": "LocalizedError",
+            "usr": "s:10Foundation14LocalizedErrorP",
+            "mangledName": "$s10Foundation14LocalizedErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PrinterEventDelegate",
+        "printedName": "PrinterEventDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(message:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PrinterFramework0A13EventDelegateP7onError7messageySS_tF",
+            "mangledName": "$s16PrinterFramework0A13EventDelegateP7onError7messageySS_tF",
+            "moduleName": "PrinterFramework",
+            "genericSig": "<τ_0_0 where τ_0_0 : PrinterFramework.PrinterEventDelegate>",
+            "sugared_genericSig": "<Self where Self : PrinterFramework.PrinterEventDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onSuccessPrinted",
+            "printedName": "onSuccessPrinted()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PrinterFramework0A13EventDelegateP16onSuccessPrintedyyF",
+            "mangledName": "$s16PrinterFramework0A13EventDelegateP16onSuccessPrintedyyF",
+            "moduleName": "PrinterFramework",
+            "genericSig": "<τ_0_0 where τ_0_0 : PrinterFramework.PrinterEventDelegate>",
+            "sugared_genericSig": "<Self where Self : PrinterFramework.PrinterEventDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:16PrinterFramework0A13EventDelegateP",
+        "mangledName": "$s16PrinterFramework0A13EventDelegateP",
+        "moduleName": "PrinterFramework",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Printer",
+        "printedName": "Printer",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "TextFont",
+            "printedName": "TextFont",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "A",
+                "printedName": "A",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextFont.Type) -> PrinterFramework.Printer.TextFont",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextFont",
+                        "printedName": "PrinterFramework.Printer.TextFont",
+                        "usr": "s:16PrinterFramework0A0C8TextFontO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextFont.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextFont",
+                            "printedName": "PrinterFramework.Printer.TextFont",
+                            "usr": "s:16PrinterFramework0A0C8TextFontO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C8TextFontO1AyA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO1AyA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "B",
+                "printedName": "B",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextFont.Type) -> PrinterFramework.Printer.TextFont",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextFont",
+                        "printedName": "PrinterFramework.Printer.TextFont",
+                        "usr": "s:16PrinterFramework0A0C8TextFontO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextFont.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextFont",
+                            "printedName": "PrinterFramework.Printer.TextFont",
+                            "usr": "s:16PrinterFramework0A0C8TextFontO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C8TextFontO1ByA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO1ByA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "C",
+                "printedName": "C",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextFont.Type) -> PrinterFramework.Printer.TextFont",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextFont",
+                        "printedName": "PrinterFramework.Printer.TextFont",
+                        "usr": "s:16PrinterFramework0A0C8TextFontO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextFont.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextFont",
+                            "printedName": "PrinterFramework.Printer.TextFont",
+                            "usr": "s:16PrinterFramework0A0C8TextFontO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C8TextFontO1CyA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO1CyA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "D",
+                "printedName": "D",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextFont.Type) -> PrinterFramework.Printer.TextFont",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextFont",
+                        "printedName": "PrinterFramework.Printer.TextFont",
+                        "usr": "s:16PrinterFramework0A0C8TextFontO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextFont.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextFont",
+                            "printedName": "PrinterFramework.Printer.TextFont",
+                            "usr": "s:16PrinterFramework0A0C8TextFontO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C8TextFontO1DyA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO1DyA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "E",
+                "printedName": "E",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextFont.Type) -> PrinterFramework.Printer.TextFont",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextFont",
+                        "printedName": "PrinterFramework.Printer.TextFont",
+                        "usr": "s:16PrinterFramework0A0C8TextFontO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextFont.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextFont",
+                            "printedName": "PrinterFramework.Printer.TextFont",
+                            "usr": "s:16PrinterFramework0A0C8TextFontO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C8TextFontO1EyA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO1EyA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C8TextFontO8rawValues5Int32Vvp",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO8rawValues5Int32Vvp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C8TextFontO8rawValues5Int32Vvg",
+                    "mangledName": "$s16PrinterFramework0A0C8TextFontO8rawValues5Int32Vvg",
+                    "moduleName": "PrinterFramework",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextFont",
+                    "printedName": "PrinterFramework.Printer.TextFont",
+                    "usr": "s:16PrinterFramework0A0C8TextFontO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextFont",
+                    "printedName": "PrinterFramework.Printer.TextFont",
+                    "usr": "s:16PrinterFramework0A0C8TextFontO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16PrinterFramework0A0C8TextFontO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO2eeoiySbAE_AEtFZ",
+                "moduleName": "PrinterFramework",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C8TextFontO9hashValueSivp",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO9hashValueSivp",
+                "moduleName": "PrinterFramework",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C8TextFontO9hashValueSivg",
+                    "mangledName": "$s16PrinterFramework0A0C8TextFontO9hashValueSivg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16PrinterFramework0A0C8TextFontO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s16PrinterFramework0A0C8TextFontO4hash4intoys6HasherVz_tF",
+                "moduleName": "PrinterFramework",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16PrinterFramework0A0C8TextFontO",
+            "mangledName": "$s16PrinterFramework0A0C8TextFontO",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "TextStyle",
+            "printedName": "TextStyle",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "header",
+                "printedName": "header",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextStyle.Type) -> PrinterFramework.Printer.TextStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextStyle",
+                        "printedName": "PrinterFramework.Printer.TextStyle",
+                        "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextStyle",
+                            "printedName": "PrinterFramework.Printer.TextStyle",
+                            "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO6headeryA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO6headeryA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "large",
+                "printedName": "large",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextStyle.Type) -> PrinterFramework.Printer.TextStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextStyle",
+                        "printedName": "PrinterFramework.Printer.TextStyle",
+                        "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextStyle",
+                            "printedName": "PrinterFramework.Printer.TextStyle",
+                            "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO5largeyA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO5largeyA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "medium",
+                "printedName": "medium",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextStyle.Type) -> PrinterFramework.Printer.TextStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextStyle",
+                        "printedName": "PrinterFramework.Printer.TextStyle",
+                        "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextStyle",
+                            "printedName": "PrinterFramework.Printer.TextStyle",
+                            "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO6mediumyA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO6mediumyA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "normal",
+                "printedName": "normal",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(PrinterFramework.Printer.TextStyle.Type) -> PrinterFramework.Printer.TextStyle",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextStyle",
+                        "printedName": "PrinterFramework.Printer.TextStyle",
+                        "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "PrinterFramework.Printer.TextStyle.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "TextStyle",
+                            "printedName": "PrinterFramework.Printer.TextStyle",
+                            "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO6normalyA2EmF",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO6normalyA2EmF",
+                "moduleName": "PrinterFramework"
+              },
+              {
+                "kind": "Var",
+                "name": "size",
+                "printedName": "size",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO4sizeSivp",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO4sizeSivp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C9TextStyleO4sizeSivg",
+                    "mangledName": "$s16PrinterFramework0A0C9TextStyleO4sizeSivg",
+                    "moduleName": "PrinterFramework",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextStyle",
+                    "printedName": "PrinterFramework.Printer.TextStyle",
+                    "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextStyle",
+                    "printedName": "PrinterFramework.Printer.TextStyle",
+                    "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO2eeoiySbAE_AEtFZ",
+                "moduleName": "PrinterFramework",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO9hashValueSivp",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO9hashValueSivp",
+                "moduleName": "PrinterFramework",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C9TextStyleO9hashValueSivg",
+                    "mangledName": "$s16PrinterFramework0A0C9TextStyleO9hashValueSivg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:16PrinterFramework0A0C9TextStyleO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s16PrinterFramework0A0C9TextStyleO4hash4intoys6HasherVz_tF",
+                "moduleName": "PrinterFramework",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:16PrinterFramework0A0C9TextStyleO",
+            "mangledName": "$s16PrinterFramework0A0C9TextStyleO",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Configuration",
+            "printedName": "Configuration",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "printerSeries",
+                "printedName": "printerSeries",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2PrinterSeries",
+                    "printedName": "PrinterFramework.Epos2PrinterSeries",
+                    "usr": "c:@E@Epos2PrinterSeries"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C13ConfigurationV13printerSeriesSo05Epos2aE0Vvp",
+                "mangledName": "$s16PrinterFramework0A0C13ConfigurationV13printerSeriesSo05Epos2aE0Vvp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Epos2PrinterSeries",
+                        "printedName": "PrinterFramework.Epos2PrinterSeries",
+                        "usr": "c:@E@Epos2PrinterSeries"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C13ConfigurationV13printerSeriesSo05Epos2aE0Vvg",
+                    "mangledName": "$s16PrinterFramework0A0C13ConfigurationV13printerSeriesSo05Epos2aE0Vvg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "printerModelLang",
+                "printedName": "printerModelLang",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2ModelLang",
+                    "printedName": "PrinterFramework.Epos2ModelLang",
+                    "usr": "c:@E@Epos2ModelLang"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C13ConfigurationV16printerModelLangSo05Epos2eF0Vvp",
+                "mangledName": "$s16PrinterFramework0A0C13ConfigurationV16printerModelLangSo05Epos2eF0Vvp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Epos2ModelLang",
+                        "printedName": "PrinterFramework.Epos2ModelLang",
+                        "usr": "c:@E@Epos2ModelLang"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C13ConfigurationV16printerModelLangSo05Epos2eF0Vvg",
+                    "mangledName": "$s16PrinterFramework0A0C13ConfigurationV16printerModelLangSo05Epos2eF0Vvg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(printerSeries:printerModelLang:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Configuration",
+                    "printedName": "PrinterFramework.Printer.Configuration",
+                    "usr": "s:16PrinterFramework0A0C13ConfigurationV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2PrinterSeries",
+                    "printedName": "PrinterFramework.Epos2PrinterSeries",
+                    "usr": "c:@E@Epos2PrinterSeries"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2ModelLang",
+                    "printedName": "PrinterFramework.Epos2ModelLang",
+                    "usr": "c:@E@Epos2ModelLang"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:16PrinterFramework0A0C13ConfigurationV13printerSeries0D9ModelLangAESo05Epos2aE0V_So0hfG0Vtcfc",
+                "mangledName": "$s16PrinterFramework0A0C13ConfigurationV13printerSeries0D9ModelLangAESo05Epos2aE0V_So0hfG0Vtcfc",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "m30II",
+                "printedName": "m30II",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Configuration",
+                    "printedName": "PrinterFramework.Printer.Configuration",
+                    "usr": "s:16PrinterFramework0A0C13ConfigurationV"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C13ConfigurationV5m30IIAEvpZ",
+                "mangledName": "$s16PrinterFramework0A0C13ConfigurationV5m30IIAEvpZ",
+                "moduleName": "PrinterFramework",
+                "static": true,
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Configuration",
+                        "printedName": "PrinterFramework.Printer.Configuration",
+                        "usr": "s:16PrinterFramework0A0C13ConfigurationV"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C13ConfigurationV5m30IIAEvgZ",
+                    "mangledName": "$s16PrinterFramework0A0C13ConfigurationV5m30IIAEvgZ",
+                    "moduleName": "PrinterFramework",
+                    "static": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:16PrinterFramework0A0C13ConfigurationV",
+            "mangledName": "$s16PrinterFramework0A0C13ConfigurationV",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Template",
+            "printedName": "Template",
+            "children": [
+              {
+                "kind": "TypeDecl",
+                "name": "Kind",
+                "printedName": "Kind",
+                "children": [
+                  {
+                    "kind": "Var",
+                    "name": "text",
+                    "printedName": "text",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(PrinterFramework.Printer.Template.Kind.Type) -> (Swift.String) -> PrinterFramework.Printer.Template.Kind",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Swift.String) -> PrinterFramework.Printer.Template.Kind",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Kind",
+                                "printedName": "PrinterFramework.Printer.Template.Kind",
+                                "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metatype",
+                            "printedName": "PrinterFramework.Printer.Template.Kind.Type",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Kind",
+                                "printedName": "PrinterFramework.Printer.Template.Kind",
+                                "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "EnumElement",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV4KindO4textyAGSScAGmF",
+                    "mangledName": "$s16PrinterFramework0A0C8TemplateV4KindO4textyAGSScAGmF",
+                    "moduleName": "PrinterFramework"
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "textWith",
+                    "printedName": "textWith",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(PrinterFramework.Printer.Template.Kind.Type) -> (Swift.String?, Swift.String?, Swift.Int, Swift.Int?) -> PrinterFramework.Printer.Template.Kind",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Swift.String?, Swift.String?, Swift.Int, Swift.Int?) -> PrinterFramework.Printer.Template.Kind",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Kind",
+                                "printedName": "PrinterFramework.Printer.Template.Kind",
+                                "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Tuple",
+                                "printedName": "(left: Swift.String?, right: Swift.String?, columnWidth: Swift.Int, tabIndent: Swift.Int?)",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Optional",
+                                    "printedName": "Swift.String?",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      }
+                                    ],
+                                    "usr": "s:Sq"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Optional",
+                                    "printedName": "Swift.String?",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "String",
+                                        "printedName": "Swift.String",
+                                        "usr": "s:SS"
+                                      }
+                                    ],
+                                    "usr": "s:Sq"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Int",
+                                    "printedName": "Swift.Int",
+                                    "usr": "s:Si"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Optional",
+                                    "printedName": "Swift.Int?",
+                                    "children": [
+                                      {
+                                        "kind": "TypeNominal",
+                                        "name": "Int",
+                                        "printedName": "Swift.Int",
+                                        "usr": "s:Si"
+                                      }
+                                    ],
+                                    "usr": "s:Sq"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metatype",
+                            "printedName": "PrinterFramework.Printer.Template.Kind.Type",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Kind",
+                                "printedName": "PrinterFramework.Printer.Template.Kind",
+                                "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "EnumElement",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV4KindO8textWithyAGSSSg_AIS2iSgtcAGmF",
+                    "mangledName": "$s16PrinterFramework0A0C8TemplateV4KindO8textWithyAGSSSg_AIS2iSgtcAGmF",
+                    "moduleName": "PrinterFramework"
+                  },
+                  {
+                    "kind": "Var",
+                    "name": "line",
+                    "printedName": "line",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(PrinterFramework.Printer.Template.Kind.Type) -> (Swift.Int) -> PrinterFramework.Printer.Template.Kind",
+                        "children": [
+                          {
+                            "kind": "TypeFunc",
+                            "name": "Function",
+                            "printedName": "(Swift.Int) -> PrinterFramework.Printer.Template.Kind",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Kind",
+                                "printedName": "PrinterFramework.Printer.Template.Kind",
+                                "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                              },
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Tuple",
+                                "printedName": "(columnWidth: Swift.Int)",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "Int",
+                                    "printedName": "Swift.Int",
+                                    "usr": "s:Si"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Metatype",
+                            "printedName": "PrinterFramework.Printer.Template.Kind.Type",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Kind",
+                                "printedName": "PrinterFramework.Printer.Template.Kind",
+                                "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "declKind": "EnumElement",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV4KindO4lineyAGSi_tcAGmF",
+                    "mangledName": "$s16PrinterFramework0A0C8TemplateV4KindO4lineyAGSi_tcAGmF",
+                    "moduleName": "PrinterFramework"
+                  }
+                ],
+                "declKind": "Enum",
+                "usr": "s:16PrinterFramework0A0C8TemplateV4KindO",
+                "mangledName": "$s16PrinterFramework0A0C8TemplateV4KindO",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "AccessControl"
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "kind",
+                "printedName": "kind",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Kind",
+                    "printedName": "PrinterFramework.Printer.Template.Kind",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C8TemplateV4kindAE4KindOvp",
+                "mangledName": "$s16PrinterFramework0A0C8TemplateV4kindAE4KindOvp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Kind",
+                        "printedName": "PrinterFramework.Printer.Template.Kind",
+                        "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV4kindAE4KindOvg",
+                    "mangledName": "$s16PrinterFramework0A0C8TemplateV4kindAE4KindOvg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "textStyle",
+                "printedName": "textStyle",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextStyle",
+                    "printedName": "PrinterFramework.Printer.TextStyle",
+                    "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C8TemplateV9textStyleAC04TextE0Ovp",
+                "mangledName": "$s16PrinterFramework0A0C8TemplateV9textStyleAC04TextE0Ovp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextStyle",
+                        "printedName": "PrinterFramework.Printer.TextStyle",
+                        "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV9textStyleAC04TextE0Ovg",
+                    "mangledName": "$s16PrinterFramework0A0C8TemplateV9textStyleAC04TextE0Ovg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "textFont",
+                "printedName": "textFont",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextFont",
+                    "printedName": "PrinterFramework.Printer.TextFont",
+                    "usr": "s:16PrinterFramework0A0C8TextFontO"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C8TemplateV8textFontAC04TextE0Ovp",
+                "mangledName": "$s16PrinterFramework0A0C8TemplateV8textFontAC04TextE0Ovp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "TextFont",
+                        "printedName": "PrinterFramework.Printer.TextFont",
+                        "usr": "s:16PrinterFramework0A0C8TextFontO"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV8textFontAC04TextE0Ovg",
+                    "mangledName": "$s16PrinterFramework0A0C8TemplateV8textFontAC04TextE0Ovg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "lineBreakAfter",
+                "printedName": "lineBreakAfter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:16PrinterFramework0A0C8TemplateV14lineBreakAfterSbvp",
+                "mangledName": "$s16PrinterFramework0A0C8TemplateV14lineBreakAfterSbvp",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV14lineBreakAfterSbvg",
+                    "mangledName": "$s16PrinterFramework0A0C8TemplateV14lineBreakAfterSbvg",
+                    "moduleName": "PrinterFramework",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(kind:textStyle:textFont:lineBreakAfter:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Template",
+                    "printedName": "PrinterFramework.Printer.Template",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Kind",
+                    "printedName": "PrinterFramework.Printer.Template.Kind",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV4KindO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextStyle",
+                    "printedName": "PrinterFramework.Printer.TextStyle",
+                    "usr": "s:16PrinterFramework0A0C9TextStyleO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TextFont",
+                    "printedName": "PrinterFramework.Printer.TextFont",
+                    "usr": "s:16PrinterFramework0A0C8TextFontO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:16PrinterFramework0A0C8TemplateV4kind9textStyle0E4Font14lineBreakAfterA2E4KindO_AC04TextF0OAC0lG0OSbtcfc",
+                "mangledName": "$s16PrinterFramework0A0C8TemplateV4kind9textStyle0E4Font14lineBreakAfterA2E4KindO_AC04TextF0OAC0lG0OSbtcfc",
+                "moduleName": "PrinterFramework",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:16PrinterFramework0A0C8TemplateV",
+            "mangledName": "$s16PrinterFramework0A0C8TemplateV",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "AccessControl"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "printerEventDelegate",
+            "printedName": "printerEventDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any PrinterFramework.PrinterEventDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvp",
+            "mangledName": "$s16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvp",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any PrinterFramework.PrinterEventDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrinterEventDelegate",
+                        "printedName": "any PrinterFramework.PrinterEventDelegate",
+                        "usr": "s:16PrinterFramework0A13EventDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvg",
+                "mangledName": "$s16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvg",
+                "moduleName": "PrinterFramework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any PrinterFramework.PrinterEventDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrinterEventDelegate",
+                        "printedName": "any PrinterFramework.PrinterEventDelegate",
+                        "usr": "s:16PrinterFramework0A13EventDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvs",
+                "mangledName": "$s16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvs",
+                "moduleName": "PrinterFramework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvM",
+                "mangledName": "$s16PrinterFramework0A0C20printerEventDelegateAA0adE0_pSgvM",
+                "moduleName": "PrinterFramework",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(configuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Printer",
+                "printedName": "PrinterFramework.Printer",
+                "usr": "c:@M@PrinterFramework@objc(cs)Printer"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Configuration",
+                "printedName": "PrinterFramework.Printer.Configuration",
+                "hasDefaultArg": true,
+                "usr": "s:16PrinterFramework0A0C13ConfigurationV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:16PrinterFramework0A0C13configurationA2C13ConfigurationV_tcfc",
+            "mangledName": "$s16PrinterFramework0A0C13configurationA2C13ConfigurationV_tcfc",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "setTemplate",
+            "printedName": "setTemplate(id:templates:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[PrinterFramework.Printer.Template]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Template",
+                    "printedName": "PrinterFramework.Printer.Template",
+                    "usr": "s:16PrinterFramework0A0C8TemplateV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PrinterFramework0A0C11setTemplate2id9templatesySS_SayAC0D0VGtKF",
+            "mangledName": "$s16PrinterFramework0A0C11setTemplate2id9templatesySS_SayAC0D0VGtKF",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "print",
+            "printedName": "print()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:16PrinterFramework0A0C5printyyF",
+            "mangledName": "$s16PrinterFramework0A0C5printyyF",
+            "moduleName": "PrinterFramework",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Printer",
+                "printedName": "PrinterFramework.Printer",
+                "usr": "c:@M@PrinterFramework@objc(cs)Printer"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@PrinterFramework@objc(cs)Printer(im)init",
+            "mangledName": "$s16PrinterFramework0A0CACycfc",
+            "moduleName": "PrinterFramework",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "onDiscovery",
+            "printedName": "onDiscovery(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "PrinterFramework.Epos2DeviceInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2DeviceInfo",
+                    "printedName": "PrinterFramework.Epos2DeviceInfo",
+                    "usr": "c:objc(cs)Epos2DeviceInfo"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PrinterFramework@objc(cs)Printer(im)onDiscovery:",
+            "mangledName": "$s16PrinterFramework0A0C11onDiscoveryyySo15Epos2DeviceInfoCSgF",
+            "moduleName": "PrinterFramework",
+            "objc_name": "onDiscovery:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "centralManagerDidUpdateState",
+            "printedName": "centralManagerDidUpdateState(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CBCentralManager",
+                "printedName": "CoreBluetooth.CBCentralManager",
+                "usr": "c:objc(cs)CBCentralManager"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PrinterFramework@objc(cs)Printer(im)centralManagerDidUpdateState:",
+            "mangledName": "$s16PrinterFramework0A0C28centralManagerDidUpdateStateyySo09CBCentralD0CF",
+            "moduleName": "PrinterFramework",
+            "objc_name": "centralManagerDidUpdateState:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPtrStatusChange",
+            "printedName": "onPtrStatusChange(_:eventType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "PrinterFramework.Epos2Printer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2Printer",
+                    "printedName": "PrinterFramework.Epos2Printer",
+                    "usr": "c:objc(cs)Epos2Printer"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PrinterFramework@objc(cs)Printer(im)onPtrStatusChange:eventType:",
+            "mangledName": "$s16PrinterFramework0A0C17onPtrStatusChange_9eventTypeySo05Epos2A0CSg_s5Int32VtF",
+            "moduleName": "PrinterFramework",
+            "objc_name": "onPtrStatusChange:eventType:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onPtrReceive",
+            "printedName": "onPtrReceive(_:code:status:printJobId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "PrinterFramework.Epos2Printer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2Printer",
+                    "printedName": "PrinterFramework.Epos2Printer",
+                    "usr": "c:objc(cs)Epos2Printer"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "PrinterFramework.Epos2PrinterStatusInfo?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Epos2PrinterStatusInfo",
+                    "printedName": "PrinterFramework.Epos2PrinterStatusInfo",
+                    "usr": "c:objc(cs)Epos2PrinterStatusInfo"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ImplicitlyUnwrappedOptional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@PrinterFramework@objc(cs)Printer(im)onPtrReceive:code:status:printJobId:",
+            "mangledName": "$s16PrinterFramework0A0C12onPtrReceive_4code6status10printJobIdySo05Epos2A0CSg_s5Int32VSo0kA10StatusInfoCSgSSSgtF",
+            "moduleName": "PrinterFramework",
+            "objc_name": "onPtrReceive:code:status:printJobId:",
+            "declAttributes": [
+              "Final",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@PrinterFramework@objc(cs)Printer",
+        "mangledName": "$s16PrinterFramework0A0C",
+        "moduleName": "PrinterFramework",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PrinterFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PrinterFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "PrinterFramework",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/vongnyuksoon\/Documents\/printer\/PrinterFramework\/Printer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3872,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vongnyuksoon\/Documents\/printer\/PrinterFramework\/Printer.swift",
+      "kind": "StringLiteral",
+      "offset": 5573,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/vongnyuksoon\/Documents\/printer\/PrinterFramework\/Printer.swift",
+      "kind": "StringLiteral",
+      "offset": 597,
+      "length": 7,
+      "value": "\"PrinterFramework.Printer\""
+    },
+    {
+      "filePath": "\/Users\/vongnyuksoon\/Documents\/printer\/PrinterFramework\/String+Extensions.swift",
+      "kind": "IntegerLiteral",
+      "offset": 202,
+      "length": 1,
+      "value": "2"
+    }
+  ]
+}
