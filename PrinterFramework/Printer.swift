@@ -102,10 +102,10 @@ public final class Printer: NSObject {
                 case .text(let string):
                     return string
                 case .textWith(let left, let right, let columnWidth, let tabIndent):
-                    let padded = "".leftPadding(toLength: tabIndent ?? 0, withPad: " ")
-                    return padLine(
+                    let padded = "".padding(toLength: tabIndent ?? 0, withPad: " ", startingAt: 0)
+                    return generateRow(
                         partOne: "\(padded)\(left ?? "")",
-                        partTwo: right,
+                        partTwo: right ?? "",
                         columnsPerLine: columnWidth,
                         tabIndent: tabIndent ?? 0
                     )
@@ -283,6 +283,7 @@ public final class Printer: NSObject {
             }
         }
         
+        isDeviceFound = false
         printer.clearCommandBuffer()
     }
     
@@ -368,42 +369,63 @@ public final class Printer: NSObject {
         }
     }
     
-    public func setTemplate(templates: [Template]) throws {
+    public func setTemplate(id: String, templates: [Template]) throws {
         guard let printer else {
             throw PrinterError.runTimeError("Printer not found")
         }
-        var text = ""
-        
-        try templates.forEach { template in
-            try align()
-            try configureText(style: template.textStyle)
-            try configureFont(with: template.textFont)
-            
-            var result = EPOS2_SUCCESS.rawValue
-            result = printer.addText(template.kind.value)
-            text += template.kind.value
-            if result != EPOS2_SUCCESS.rawValue {
-                printer.clearCommandBuffer()
-                let msg = handleError(result, method: "addText")
-                throw PrinterError.runTimeError(msg)
-            }
-            
-            if template.lineBreakAfter {
-                try nextLine(line: 1)
-            }
-        }
-        
-        debugPrint(text)
+        self.printingJobs.append(.init(id: id, templates: templates))
     }
     
     public func print() {
-        do {
-            try cutFeed()
+        if isDeviceFound {
+            processScheduledJobs()
+        } else {
             searchPrinter()
+        }
+    }
+    
+    private var processingJobId: String?
+    
+    private func processScheduledJobs() {
+        guard let nextJob = self.printingJobs.first, let printer, processingJobId == nil else {
+            return
+        }
+        debugPrint("PRINT -> Processing \(nextJob.id), scheduledJobs \(self.printingJobs.count)")
+        do {
+            var text = ""
+            self.processingJobId = nextJob.id
+            try nextJob.templates.forEach { template in
+                try align()
+                try configureText(style: template.textStyle)
+                try configureFont(with: template.textFont)
+                
+                var result = EPOS2_SUCCESS.rawValue
+                result = printer.addText(template.kind.value)
+                text += template.kind.value
+                if result != EPOS2_SUCCESS.rawValue {
+                    printer.clearCommandBuffer()
+                    let msg = handleError(result, method: "addText")
+                    throw PrinterError.runTimeError(msg)
+                }
+                
+                if template.lineBreakAfter {
+                    try nextLine(line: 1)
+                }
+            }
+            
+            debugPrint(text)
+            try cutFeed()
+            self.printData(using: printer)
+            self.printingJobs.removeFirst()
+            self.processingJobId = nil
+            printer.clearCommandBuffer()
+            debugPrint("PRINT -> Done \(nextJob.id), remaining scheduledJobs \(self.printingJobs.count)")
+            self.processScheduledJobs()
         } catch {
             debugPrint("PRINT -> print err")
             notifyError(message: error.localizedDescription)
-            return
+            self.processingJobId = nil
+            self.processScheduledJobs()
         }
     }
     
@@ -417,6 +439,8 @@ public final class Printer: NSObject {
     }
     
     private func cleanup() {
+        guard printingJobs.isEmpty else { return }
+        
         debugPrint("PRINT -> clean delegate")
         Epos2Discovery.stop()
         
@@ -428,6 +452,8 @@ public final class Printer: NSObject {
         centralManager = nil
         centralManager?.delegate = nil
     }
+    
+    private var printingJobs = [PrinterJob]()
     
     private func notifyOk() {
         debugPrint("PRINT -> notifyOk on Threadh: \(Thread.current)")
@@ -460,7 +486,7 @@ extension Printer: Epos2DiscoveryDelegate {
         }
         
         isDeviceFound = true
-        printData(using: printer)
+        processScheduledJobs()
     }
 }
 
@@ -475,6 +501,14 @@ extension Printer: CBCentralManagerDelegate {
         default:
             debugPrint("PRINT -> centralManagerDidUpdateState not ok")
             self.notifyError(message: "Bluetooth not turned on.")
+        }
+    }
+}
+
+extension Printer: Epos2PtrStatusChangeDelegate {
+    public func onPtrStatusChange(_ printerObj: Epos2Printer!, eventType: Int32) {
+        if eventType == EPOS2_EVENT_COVER_CLOSE.rawValue || eventType == EPOS2_EVENT_RECONNECT.rawValue {
+            self.print()
         }
     }
 }
