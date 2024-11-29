@@ -7,72 +7,87 @@
 
 import Foundation
 
-extension String {
-    func leftPadding(toLength: Int, withPad character: Character) -> String {
-        let stringLength = self.count
-        if stringLength < toLength {
-            return String(repeatElement(character, count: toLength - stringLength)) + self
-        } else {
-            return String(self.suffix(toLength))
-        }
-    }
+func getTokensTotal(t1: [String.SubSequence], t2: [String.SubSequence], gap: Int = 2) -> Int {
+    return (t1.joined(separator: " ").count + t2.joined(separator: " ").count) + gap
 }
 
-// Utility: Pads two strings to columns per line
-func padLine(partOne: String?, partTwo: String?, columnsPerLine: Int, tabIndent: Int) -> String {
-    let partOne = partOne ?? ""
-    let partTwo = partTwo ?? ""
-    var concat: String
+func generateRow(partOne: String, partTwo: String, columnsPerLine: Int, tabIndent: Int) -> String {
+    var partOneTokens = partOne.split(separator: " ")
+    var partTwoTokens = partTwo.split(separator: " ")
     
-    if (partOne.count + partTwo.count) > columnsPerLine {
+    var result = ""
+    var done = false
+    
+    while !done {
         
-        let p1Count = partOne.count
-        let p2Count = partTwo.count
+        var leftTokens = [String.SubSequence]()
+        var rightTokens = [String.SubSequence]()
+        var canAddToken = true
+        var shouldPad = false
         
-        let wrappedTextLen = p1Count - p2Count
-        let shouldWrapRightSide = wrappedTextLen < 0 || p1Count > p2Count
-        
-        if shouldWrapRightSide {
-            let wrappedText = String(partTwo.prefix(abs(wrappedTextLen)))
-            if wrappedText == partTwo { return partTwo }
-            concat = padLine(
-                partOne: partOne,
-                partTwo: wrappedText,
-                columnsPerLine: columnsPerLine,
-                tabIndent: tabIndent
-            )
+        while canAddToken {
+            if let leftToken = partOneTokens.first {
+                let leftPadded = String.SubSequence(stringLiteral: "".padding(toLength: tabIndent, withPad: " ", startingAt: 0))
+                if getTokensTotal(t1: leftTokens + [leftPadded, leftToken], t2: rightTokens) < columnsPerLine {
+                    if leftTokens.isEmpty || shouldPad {
+                        leftTokens.append(leftPadded)
+                        shouldPad = false
+                    }
+                    leftTokens.append(leftToken)
+                    if partOneTokens.isEmpty == false {
+                        partOneTokens.removeFirst()
+                    }
+                } else {
+                    canAddToken = false
+                    break
+                }
+            }
             
-            let nextLineText = String(partTwo.suffix(p2Count - abs(wrappedTextLen)))
-            let padded = "".leftPadding(toLength: columnsPerLine - nextLineText.count, withPad: " ")
-            concat += padLine(
-                partOne: nil,
-                partTwo: "\(padded)\(nextLineText)",
-                columnsPerLine: columnsPerLine,
-                tabIndent: tabIndent
-            )
-        } else {
-            let wrappedText = String(partOne.prefix(wrappedTextLen))
-            concat = padLine(
-                partOne: wrappedText,
-                partTwo: partTwo,
-                columnsPerLine: columnsPerLine,
-                tabIndent: tabIndent
-            )
+            if let rightToken = partTwoTokens.first {
+                if getTokensTotal(t1: leftTokens, t2: rightTokens + [rightToken]) < columnsPerLine {
+                    rightTokens.append(rightToken)
+                    if partTwoTokens.isEmpty == false {
+                        partTwoTokens.removeFirst()
+                    }
+                } else {
+                    canAddToken = false
+                    break
+                }
+            }
             
-            let padded = "".leftPadding(toLength: tabIndent, withPad: " ")
-            let nextLineText = String(partOne.suffix(p1Count - wrappedTextLen))
-            concat += padLine(
-                partOne: "\n\(padded)\(nextLineText)",
-                partTwo: nil,
-                columnsPerLine: columnsPerLine,
-                tabIndent: tabIndent
-            )
+            let hasTokens = !(partOneTokens.isEmpty && partTwoTokens.isEmpty)
+            let total = getTokensTotal(t1: leftTokens, t2: rightTokens)
+            canAddToken = (total < columnsPerLine) && hasTokens
         }
-    } else {
-        let padding = columnsPerLine - (partOne.count + partTwo.count)
-        concat = partOne + String(repeating: " ", count: padding) + partTwo
+        
+        // Finalized
+        let row = fillRow(
+            left: leftTokens.joined(separator: " "),
+            right: rightTokens.joined(separator: " "),
+            columnsPerLine: columnsPerLine
+        )
+        
+        print("ROW: \(row)")
+        result += row
+        
+        if partOneTokens.isEmpty == false {
+            canAddToken = true
+            shouldPad = tabIndent > 0
+        } else if partTwoTokens.isEmpty == false {
+            canAddToken = true
+        }
+        
+        if partOneTokens.isEmpty && partTwoTokens.isEmpty {
+            done = true
+        }
     }
-    return concat
+    
+    return result
+}
+
+func fillRow(left: String, right: String, columnsPerLine: Int) -> String {
+    let padding = columnsPerLine - (left.count + right.count)
+    return left + String(repeating: " ", count: padding > 0 ? padding : 0) + right
 }
 
 // Utility: String repeat
